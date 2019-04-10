@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import NavBarMainPage from './NavBarMainPage';
+import MainPage from './MainPage';
 
 class App extends Component {
 
@@ -18,21 +20,16 @@ class App extends Component {
 	componentWillMount() {
     	this.callAPI();
 	}
+					//<p className="App-intro">{this.state.apiResponse}</p>
 
 	render() {
 	return (
-	  <div className="App">
-	    <header className="App-header">
-	      <img src={logo} className="App-logo" alt="logo" />
-	      <p className="App-intro">{this.state.apiResponse}</p>
-	      <a
-	        className="App-link"
-	        href="https://reactjs.org"
-	        target="_blank"
-	        rel="noopener noreferrer"
-	      >
-	        Learn React
-	      </a>
+	  <div className="App" >
+
+			<NavBarMainPage />
+
+			<header className="App-header">
+				<MainPage />
 	    </header>
 	  </div>
 	);
