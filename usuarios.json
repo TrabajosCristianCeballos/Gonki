@@ -1,0 +1,8 @@
+{"nombre": NOMBRE, 
+"usuario": USERNAME,
+"email": E-MAIL, 
+"telefono": TELEFONO, 
+"fechaNacimiento": dd/mm/yyyy, 
+"nacionalidad": NACIONALIDAD, 
+"idiomas": [IDIOMA1, IDIOMA2], 
+"preferencias": [TAG1, TAG2] }

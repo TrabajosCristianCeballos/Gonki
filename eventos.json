@@ -1,0 +1,20 @@
+{
+"nombre": NOMBRE, 
+"organizadores": [USUARIO1, USUARIO2], 
+"descripcion": DESCRIPCION, 
+"horaInicio": 20:00, 
+"fecha": dd/mm/yyyy, 
+"idiomas": [IDIOMA1, IDIOMA2], 
+"sitios": [SITIO1, SITIO2] 
+"calificacion": [{
+	"user": USUARIO, 
+	"calificacion": 4,
+	"comentario": COMENTARIO
+	},
+	{
+	"user": USUARIO2, 
+	"calificacion": 5,
+	"comentario": COMENTARIO2
+	}],
+"Asistentes": [USUARIO1, USUARIO2]
+}
