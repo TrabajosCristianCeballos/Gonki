@@ -4,7 +4,6 @@
 "descripcion": DESCRIPCION, 
 "horario": "lunes a viernes de ... a ...",  
 "tipos": [TIPO1, TIPO2], 
-"sitios": [SITIO1, SITIO2] 
 "calificacion": [{
 	"user": USUARIO, 
 	"calificacion": 4,
