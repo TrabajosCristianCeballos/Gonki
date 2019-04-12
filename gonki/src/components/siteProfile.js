@@ -7,14 +7,17 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-
+//this class handle the profile of the sites
 export class siteProfile extends React.Component {
 
+    // constructor of siteProfiles that creates a new variable to store the data
     constructor(props) {
       super(props);
       this.state = { apiResponse: "", calificacion: ""};
     }
 
+    // This method calls the api stored that answer with the data
+    // Also, process the data to save it on local variables
     callSites() {
       fetch("http://localhost:9000/sites")
         .then(res => res.text())
@@ -31,16 +34,18 @@ export class siteProfile extends React.Component {
 
     }
 
+    //method that is called when the siteProfile component start
     componentWillMount() {
       this.callSites();
     }
 
+    //handler of the navigation when you have to change to the Main Page
     onNavigateSite() {
       browserHistory.push("/home");
     }
 
+    //render of the graphical interfaces of the web-page
     render() {
-
         console.log(this.state.calificacion);
         return (
           <Container className="rowMargins">

@@ -9,17 +9,20 @@ import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 
 
-
+//This class handle the navigation bar on top of the web-page
 class Header extends React.Component {
 
+    //handler of the navigation whe you have to change to the Main Page
     onNavigateHome() {
       browserHistory.push("/home");
     }
 
+    //handler of the navigation when you have to change to the user profile
     onNavigateProfile() {
       browserHistory.push("/user/10");
     }
 
+    //render of the graphical interfaces
     render() {
       return(
         <Navbar bg="light" expand="lg" ml="0" mr="0">

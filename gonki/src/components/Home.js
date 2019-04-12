@@ -11,13 +11,18 @@ import Image from 'react-bootstrap/Image';
 
 import {browserHistory} from "react-router";
 
+
+//Main page of the web-site. this class handle the interfaces and navigation
+// of the main page
 export class Home extends React.Component {
 
+  // constructor of home that creates an aditional variable
   constructor(props) {
     super(props);
     this.state = { apiResponse: ""};
   }
 
+  // fetch the link to obtain the answer from the back-end
   callSites() {
     fetch("http://localhost:9000/sites")
       .then(res => res.text())
@@ -27,14 +32,17 @@ export class Home extends React.Component {
 
   }
 
+  //method that is called when the Home component start
   componentWillMount() {
     this.callSites();
   }
 
+  // handler for the navigation inside the web-page
   onNavigateSite(id) {
     browserHistory.push("/site/" + id);
   }
 
+  //Render of the graphical interfaces
     render() {
         return (
           <Container background-color="#56f442">

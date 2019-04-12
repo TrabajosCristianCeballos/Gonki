@@ -8,19 +8,23 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
+
+//this class handle the user profile
 export class User extends React.Component {
 
 
-
+    // handler of the navigation when you have to change to the Main Page
     onNavigateHome() {
         browserHistory.push("/home");
     }
 
+    // constructor with a new variable to store the data
     constructor(props) {
       super(props);
       this.state = { apiResponse: "", idiomas: ""};
     }
 
+    // fetch of the API to receive data from the database
     callSites() {
       fetch("http://localhost:9000/users")
         .then(res => res.text())
@@ -35,10 +39,12 @@ export class User extends React.Component {
         .then(res => this.setState({idiomas: res}));
     }
 
+    //method called when the User component starts
     componentWillMount() {
       this.callSites();
     }
 
+    // render of the graphical interfaces in the web-page
     render() {
         return (
             <Container className="rowMargins">

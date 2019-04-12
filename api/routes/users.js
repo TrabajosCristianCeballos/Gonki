@@ -1,5 +1,5 @@
 var express = require('express');
-var Evento = require('../schemasdbs/Eventos')
+//var Evento = require('../schemasdbs/Eventos')
 var router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
@@ -31,7 +31,7 @@ router.get('/', function(req, res, next) {
         // // Get the documents collection
         const collection = db.collection('Usuarios');
 
-        // // Find some documents
+        // // Find some documents method
         collection.find({}).toArray((err, docs) => {
             assert.equal(err, null);
             // assert.equal(err, null);
@@ -42,7 +42,5 @@ router.get('/', function(req, res, next) {
         });
     });
 });
-
-
 
 module.exports = router;
