@@ -19,9 +19,7 @@ export class Root extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className="xs-10 ">
-                        {this.props.children}
-                    </Col>
+                    {this.props.children}
                 </Row>
             </Container>
         );

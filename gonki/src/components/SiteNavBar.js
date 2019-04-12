@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, browserHistory} from "react-router";
+import {browserHistory} from "react-router";
 
 import Image from 'react-bootstrap/Image';
 import Navbar from 'react-bootstrap/Navbar';
@@ -24,7 +24,7 @@ class Header extends React.Component {
       return(
         <Navbar bg="light" expand="lg" ml="0" mr="0">
           <Navbar.Brand onClick={this.onNavigateHome}>
-            <Image src = "./Images/red_Alien_icon.jpg" roundedCircle className="Icon_right_corner"/>
+            <Image src = "./red_Alien_icon.jpg" roundedCircle className="Icon_right_corner"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

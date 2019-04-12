@@ -6,6 +6,7 @@ import {Router, Route, browserHistory, IndexRoute} from "react-router";
 import {Root} from "./components/Root";
 import {Home} from "./components/Home";
 import {User} from "./components/User";
+import {siteProfile} from "./components/siteProfile";
 
 class App extends Component {
 
@@ -27,14 +28,17 @@ class App extends Component {
 
 	render() {
 	return (
-						<Router history={browserHistory}>
-                <Route path={"/"} component={Root} >
-                    <IndexRoute component={Home} />
-                    <Route path={"user/:id"} component={User} />
-                    <Route path={"home"} component={Home} />
-                </Route>
-                <Route path={"home-single"} component={Home}/>
-            </Router>
+			<div className="bg-color">
+				<Router history={browserHistory}>
+            <Route path={"/"} component={Root} >
+                <IndexRoute component={Home} />
+                <Route path={"user/:id"} component={User} />
+                <Route path={"home"} component={Home} />
+								<Route path={"site/:id"} component={siteProfile} />
+            </Route>
+            <Route path={"home-single"} component={Home}/>
+        </Router>
+			</div>
 	);
 	}
 }

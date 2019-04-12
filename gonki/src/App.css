@@ -1,15 +1,40 @@
 /*.App {
   text-align: center;
 }*/
-.Container-decorator{
-  color: #fffff1;
-  background-color: #a83232;
-
-}
-
 .Icon_right_corner{
   width: 40px;
   height: 40px;
+}
+
+.rowMargins{
+  margin-top: 50px;
+  margin-bottom: 40px
+}
+
+.bg-color{
+  background-color: #fcfffe;
+}
+
+.col-aux{
+    max-width: 200px
+}
+
+.align-right{
+    max-width: 10%;
+}
+
+.cardMargins2{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  min-width: 1140px;
+  max-width: 1140px;
+}
+
+.cardMargins{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 1140px;
+  max-width: 1140px;
 }
 
 .container_customized{
@@ -27,6 +52,10 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-body {
+  background-color: #56f442;
 }
 
 @keyframes App-logo-spin {
