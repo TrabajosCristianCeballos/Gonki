@@ -1,14 +1,9 @@
 var express = require('express');
-var Evento = require('../schemasdbs/Eventos')
 var router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 
-const findDocuments = function(db, callback) {
-
-
-}
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -29,7 +24,7 @@ router.get('/', function(req, res, next) {
         console.log("WE HAVE A CURSOR:::::::::::")
 
         // // Get the documents collection
-        const collection = db.collection('Usuarios');
+        const collection = db.collection('Eventos');
 
         // // Find some documents
         collection.find({}).toArray((err, docs) => {
