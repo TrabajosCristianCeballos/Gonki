@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import NavBarMainPage from './NavBarMainPage';
-import MainPage from './MainPage';
+import {Router, Route, browserHistory, IndexRoute} from "react-router";
+
+import {Root} from "./components/Root";
+import {Home} from "./components/Home";
+import {User} from "./components/User";
 
 class App extends Component {
 
@@ -20,18 +23,18 @@ class App extends Component {
 	componentWillMount() {
     	this.callAPI();
 	}
-					//<p className="App-intro">{this.state.apiResponse}</p>
+					//<p className="App-intro">{this.state.apiResponse}</p>  <Route path={"user/:id"} component={User} />
 
 	render() {
 	return (
-	  <div className="App" >
-
-			<NavBarMainPage />
-
-			<header className="App-header">
-				<MainPage />
-	    </header>
-	  </div>
+						<Router history={browserHistory}>
+                <Route path={"/"} component={Root} >
+                    <IndexRoute component={Home} />
+                    <Route path={"user/:id"} component={User} />
+                    <Route path={"home"} component={Home} />
+                </Route>
+                <Route path={"home-single"} component={Home}/>
+            </Router>
 	);
 	}
 }

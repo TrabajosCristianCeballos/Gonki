@@ -8,9 +8,16 @@
 }
 
 .Icon_right_corner{
-
   width: 40px;
   height: 40px;
+}
+
+.container_customized{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .App-header {
