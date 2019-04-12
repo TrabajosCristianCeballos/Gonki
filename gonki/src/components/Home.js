@@ -5,6 +5,9 @@ import Row from 'react-bootstrap/Row';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
+import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 
 import {browserHistory} from "react-router";
 
@@ -36,21 +39,54 @@ export class Home extends React.Component {
         return (
           <Container background-color="#56f442">
             <Row className="rowMargins">
-                <h3>Pagina Principal</h3>
+              <Carousel>
+                <Carousel.Item>
+                  <Image
+                    src="./first_slide.png"
+                    alt="First slide"
+                    fluid
+                  />
+                  <Carousel.Caption>
+                    <h3>Explora el mundo</h3>
+                    <p>Siempre hay algo por descubrir en cada sitio al que vayas</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    src="./second_slide.png"
+                    alt="Third slide"
+                    fluid
+                  />
+                  <Carousel.Caption>
+                    <h3>Conectate.</h3>
+                    <p>cada dia tienes la posibilidad de encontrar aquello que mas te gusta</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    src="./third_slide.png"
+                    alt="Third slide"
+                    fluid
+                  />
+                  <Carousel.Caption>
+                    <h3>Viaja</h3>
+                    <p>Hacemos que conocer un sitio nuevo sea sencillo</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
             </Row>
             <Row>
               <Card className="cardMargins">
                 <Card.Header as="h5">{this.state.apiResponse.nombre}</Card.Header>
                 <Card.Body>
                   <Card.Title></Card.Title>
-                  <Card.Text>
-
-                  </Card.Text>
                   <Card.Text className= "textDescription">
                     {this.state.apiResponse.descripcion}
                   </Card.Text>
                   <Card.Text className= "textTag">
-                    tipo: {this.state.apiResponse.tipos}
+                    <Badge pill variant="info">
+                      {this.state.apiResponse.tipos}
+                    </Badge>
                   </Card.Text>
                   <Button variant="outline-dark" onClick= {this.onNavigateSite.bind(this, this.state.apiResponse._id)}>Ver Mas...</Button>
                 </Card.Body>

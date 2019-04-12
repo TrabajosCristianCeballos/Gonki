@@ -1,7 +1,7 @@
 import React from "react";
 import { browserHistory } from "react-router";
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Badge from 'react-bootstrap/Badge'
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
@@ -88,7 +88,7 @@ export class User extends React.Component {
                     <Row>
                       <Col className="col-aux"><p>IDIOMAS</p></Col>
                       <Col>
-                        <Form.Control plaintext readOnly defaultValue="Cargando..." value= {this.state.idiomas}/>
+                        <Badge pill variant="info">{this.state.idiomas}</Badge>
                       </Col>
                     </Row>
                     </Card.Body>

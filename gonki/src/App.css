@@ -19,6 +19,10 @@
     max-width: 200px
 }
 
+.imgLimit{
+  max-height: 240px;
+}
+
 .align-right{
     max-width: 10%;
 }
