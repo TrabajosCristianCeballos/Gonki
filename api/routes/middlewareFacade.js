@@ -1,3 +1,3 @@
-const apiEventos = require('./eventos');
-const apiSitios = require('./sitios');
-const apiUsers = require('./users');
+import getSitios from 'eventos';
+import getUser from 'users';
+import getEventos from 'eventos';
