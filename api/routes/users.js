@@ -1,4 +1,4 @@
-export function getUser(){
+function getUser(){
   //Declarations
   var express = require('express');
   var router = express.Router();
@@ -32,5 +32,6 @@ export function getUser(){
          });
      });
   });
-  module.exports = router;
 }
+
+module.exports = getUser;

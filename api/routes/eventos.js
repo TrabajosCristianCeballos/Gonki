@@ -1,4 +1,4 @@
-export function getEventos(){
+function getEventos(){
   // //Declarations
   var express = require('express');
   var router = express.Router();
@@ -17,7 +17,7 @@ export function getEventos(){
         //Connect message
         console.log("is connected:::", client.isConnected())
         const db = client.db(dbName);
-        console.log("WE HAVE A CURSOR:::::::::::")
+        console.log("We have a cursor")
         // Get the documents collection
         const collection = db.collection('Eventos');
         // Find some documents
@@ -31,5 +31,6 @@ export function getEventos(){
         });
     });
   });
-  module.exports = router;
 }
+
+module.exports = getEventos;
