@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
 //var sitesRouter = require('./routes/sitios');
 //var eventsRouter = require('./routes/eventos');
-var testApiRouter = require('./routes/testAPI');
+var testApiRouter = require('./routes/middlewareFacade');
 
 
 var app = express();
@@ -31,7 +31,7 @@ app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 //app.use('/events', eventsRouter);
 //app.use('/sites', sitesRouter);
-app.use('/testAPI', testApiRouter);
+app.use('/f', testApiRouter);
 
 
 // catch 404 and forward to error handler
